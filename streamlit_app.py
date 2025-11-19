@@ -9,7 +9,7 @@ df_demographics = pd.read_excel("churn.xlsx", sheet_name=1)
 
 with st.sidebar:
     st.header('Filters')
-    Category = st.selectbox('Category', df_demographics['ProductCategory'].unique())
+    Category = st.multiselect('Category', df_demographics['ProductCategory'].unique())
 
 # Filter the dataframe based on the selected category
 filtered_df = df_demographics[df_demographics['ProductCategory'] == Category]
