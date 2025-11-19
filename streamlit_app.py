@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-st.title('Arnan Bonny')
+st.title('Kristen Patupatu Dey')
 st.write('Hellow World!')
 # Single sheet by position (0-based)
 df_demographics = pd.read_excel("churn.xlsx", sheet_name=1)
