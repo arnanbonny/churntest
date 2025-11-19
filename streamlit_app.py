@@ -5,5 +5,5 @@ import seaborn as sns
 st.title('Arnan Bonny')
 st.write('Hellow World!')
 # Single sheet by position (0-based)
-df_demographics = pd.read_excel("Customer_Churn_Data_Large Lloyds.xlsx", sheet_name=0)
+df_demographics = pd.read_excel("churn.xlsx", sheet_name=0)
 
