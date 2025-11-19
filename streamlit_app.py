@@ -8,5 +8,5 @@ st.write('Hellow World!')
 df_demographics = pd.read_excel("churn.xlsx", sheet_name=0)
 
 with st.expander('Patu'): 
-  sns.catplot(data = df_demographics, x ='IncomeLevel', y ='Age',hue = 'MaritalStatus', kind = 'box')
+  st.scatter_chart(data = df_demographics, x ='IncomeLevel', y ='Age',hue = 'MaritalStatus', kind = 'box')
   plt.show()
