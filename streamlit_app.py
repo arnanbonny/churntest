@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 st.title('Arnan Bonny')
 st.write('Hellow World!')
 # Single sheet by position (0-based)
