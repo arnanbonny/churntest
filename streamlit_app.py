@@ -13,4 +13,4 @@ with st.expander('Patu'):
 
 with st.sidebar:
   st.header('Filters')
-  Category = st.selectbox('Category', ('Books','Clothing','Electronics','Furniture','Groceries')
+  Category = st.selectbox('Category', ('Books','Clothing','Electronics','Furniture','Groceries'))
