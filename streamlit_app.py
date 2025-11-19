@@ -8,5 +8,5 @@ st.write('Hellow World!')
 df_demographics = pd.read_excel("churn.xlsx", sheet_name=1)
 
 with st.expander('Patu'): 
-  st.scatter_chart(data=df_demographics, x='ProductCategory', y='AmountSpent')
+  st.bar_chart(data=df_demographics, x='ProductCategory', y='AmountSpent')
   plt.show()
