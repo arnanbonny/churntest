@@ -7,10 +7,13 @@ st.write('Hellow World!')
 # Single sheet by position (0-based)
 df_demographics = pd.read_excel("churn.xlsx", sheet_name=1)
 
-with st.expander('Patu'): 
-  st.bar_chart(data=df_demographics, x='ProductCategory', y='AmountSpent')
-  plt.show()
-
 with st.sidebar:
-  st.header('Filters')
-  Category = st.selectbox('Category', ('Books','Clothing','Electronics','Furniture','Groceries'))
+    st.header('Filters')
+    Category = st.selectbox('Category', df_demographics['ProductCategory'].unique())
+
+# Filter the dataframe based on the selected category
+filtered_df = df_demographics[df_demographics['ProductCategory'] == Category]
+
+with st.expander('Patu'):
+    st.bar_chart(data=filtered_df, x='ProductCategory', y='AmountSpent')
+
