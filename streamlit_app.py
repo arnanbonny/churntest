@@ -10,3 +10,7 @@ df_demographics = pd.read_excel("churn.xlsx", sheet_name=1)
 with st.expander('Patu'): 
   st.bar_chart(data=df_demographics, x='ProductCategory', y='AmountSpent')
   plt.show()
+
+with st.sidebar:
+  st.header('Filters')
+  Category = st.selectbox('Category', ('Books','Clothing','Electronics','Furniture','Groceries')
