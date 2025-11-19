@@ -18,6 +18,6 @@ with st.sidebar:
 filtered_df = df_demographics[df_demographics['ProductCategory'].isin(Categories)]
 
 with st.expander('Patu'):
-    st.bar_chart(data=filtered_df, x='ProductCategory', y
+    st.bar_chart(data=filtered_df, x='ProductCategory', y='AmountSpent')
 
 
