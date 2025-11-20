@@ -28,9 +28,9 @@ with st.expander('Bar Chart'):
 with st.expander('DataFrame'):
     st.dataframe(data=filtered_df)
 # --- Sidebar Selection ---
+# --- Sidebar Selection ---
 st.sidebar.header("Select a DataFrame")
 
-# Create a dictionary for easy mapping of names to DataFrame objects
 dataframes = {
     "Demographics Data": df_demographics,
     "Transaction Data": df_transaction
@@ -38,17 +38,12 @@ dataframes = {
 
 selected_df_name = st.sidebar.selectbox(
     "Choose a dataset:",
-    list(dataframes.keys())       # ← Missing parenthesis was here
+    list(dataframes.keys())
 )
 
-# Get the actual DataFrame object based on the user's selection
 selected_df = dataframes[selected_df_name]
 
-# --- Main Page Display ---
-
 with st.expander(f"View {selected_df_name}"):
-    st.dataframe(data=selected_df, use_container_width=True)
-
-st.write(f"Displaying {selected_df_name} above.")
+    st.dataframe(selected_df, use_container_width=True)
 
 
