@@ -15,9 +15,7 @@ with st.sidebar:
     st.header('Filters')
     Categories = st.multiselect('Category', df_demographics['ProductCategory'].unique(), default=df_demographics['ProductCategory'].unique())
 
-with st.sidebar:
-    st.header('Filters')
-    Categories = st.select('Category', df_demographics['ProductCategory'].unique(), default=df_demographics['ProductCategory'].unique())
+
 
 # Filter dataframe for all selected categories
 filtered_df = df_demographics[df_demographics['ProductCategory'].isin(Categories)]
