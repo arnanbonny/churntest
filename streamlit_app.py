@@ -36,18 +36,17 @@ dataframes = {
     "Transaction Data": df_transaction
 }
 
-selected_df_name = st.sidebar.selectbox( # Corrected from st.sidebar.select
+selected_df_name = st.sidebar.selectbox(
     "Choose a dataset:",
-    list(dataframes.keys() 
+    list(dataframes.keys())       # ← Missing parenthesis was here
+)
 
 # Get the actual DataFrame object based on the user's selection
 selected_df = dataframes[selected_df_name]
 
 # --- Main Page Display ---
 
-# Use an expander as requested
 with st.expander(f"View {selected_df_name}"):
-    # Display the selected DataFrame using the recommended st.dataframe()
     st.dataframe(data=selected_df, use_container_width=True)
 
 st.write(f"Displaying {selected_df_name} above.")
