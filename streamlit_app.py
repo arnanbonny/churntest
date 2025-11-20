@@ -36,11 +36,9 @@ dataframes = {
     "Transaction Data": df_transaction
 }
 
-# Use st.sidebar.selectbox to let the user choose which DF to display
-selected_df_name = st.sidebar.selectbox(
+selected_df_name = st.sidebar.selectbox( # Corrected from st.sidebar.select
     "Choose a dataset:",
-    list(dataframes.keys())
-)
+    list(dataframes.keys() 
 
 # Get the actual DataFrame object based on the user's selection
 selected_df = dataframes[selected_df_name]
