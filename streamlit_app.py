@@ -30,8 +30,8 @@ with st.expander('Dataframe'):
 st.sidebar.header("Select a DataFrame")
 
 dataframes = {
-    "Demographics Data": df_demographics,
-    "Transaction Data": df_transaction
+    "Transaction Data": df_demographics,
+    "Customer Service Data": df_transaction
 }
 
 selected_df_name = st.sidebar.selectbox(
