@@ -23,8 +23,8 @@ filtered_df = df_demographics[df_demographics['ProductCategory'].isin(Categories
 with st.expander('Bar Chart'):
     st.bar_chart(data=filtered_df, x='ProductCategory', y='AmountSpent')
 
-with st.expander('DataFrame'):
-    st.dataframe(data=filtered_df)
+
+st.dataframe(data=filtered_df)
 # --- Sidebar Selection ---
 # --- Sidebar Selection ---
 st.sidebar.header("Select a DataFrame")
