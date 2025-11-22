@@ -45,6 +45,7 @@ selected_df = dataframes[selected_df_name]
 st.dataframe(selected_df, use_container_width=True)'''
 
 from sklearn.ensemble import RandomForestClassifier
+import numpy as np
 
 st.title('🤖 Machine Learning App')
 
